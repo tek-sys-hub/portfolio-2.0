@@ -79,12 +79,10 @@ pagescreenshot/
 
 ## 📷 Screenshots
 
-## 📷 Screenshots
-
 ### Home Page
 ![Home](./pagescreenshot/2026-07-06-162620_hyprshot.png)
 
-### Projects Section
+### About / Terminal Section
 ![Projects](./pagescreenshot/2026-07-06-162636_hyprshot.png)
 
 ### Skills Section
