@@ -1,0 +1,24 @@
+.projects-section {
+  padding-top: var(--space-4xl);
+}
+
+.projects-grid {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-xs);
+  color: var(--text-dim);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--space-md);
+}
+
+.projects-total {
+  color: var(--text-secondary);
+}

@@ -1,0 +1,121 @@
+.skills-section {
+  padding-top: var(--space-4xl);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+
+.skills-category {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+}
+
+.skills-category:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--glow-green);
+}
+
+.skills-category-title {
+  font-size: var(--fs-sm);
+  color: var(--cyan-primary);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.skills-category-title::before {
+  content: '# ';
+  color: var(--text-dim);
+}
+
+/* Neofetch Card */
+.neofetch-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--space-lg);
+  margin-top: var(--space-xl);
+  transition: all var(--transition-base);
+}
+
+.neofetch-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--glow-green);
+}
+
+.neofetch-content {
+  display: flex;
+  gap: var(--space-2xl);
+  align-items: flex-start;
+}
+
+.neofetch-ascii {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  line-height: 1.2;
+  color: var(--green-primary);
+  text-shadow: var(--glow-text-green);
+  white-space: pre;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.neofetch-info {
+  flex: 1;
+  font-size: var(--fs-sm);
+}
+
+.neofetch-title {
+  color: var(--green-primary);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.neofetch-separator {
+  color: var(--text-dim);
+  margin-bottom: var(--space-sm);
+}
+
+.neofetch-line {
+  margin-bottom: 3px;
+  color: var(--text-secondary);
+}
+
+.neofetch-line .key {
+  color: var(--cyan-primary);
+  font-weight: 600;
+}
+
+.neofetch-colors {
+  display: flex;
+  gap: 4px;
+  margin-top: var(--space-md);
+}
+
+.neofetch-color-block {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .neofetch-content {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .neofetch-ascii {
+    font-size: 0.45rem;
+  }
+}

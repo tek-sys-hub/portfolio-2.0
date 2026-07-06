@@ -1,0 +1,123 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-xl);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+}
+
+.nav-path {
+  color: var(--text-dim);
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
+}
+
+.nav-path .user {
+  color: var(--green-primary);
+}
+
+.nav-path .separator {
+  color: var(--text-dim);
+}
+
+.nav-path .dir {
+  color: var(--cyan-primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+}
+
+.nav-link {
+  padding: 6px 14px;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  background: none;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-link:hover {
+  color: var(--green-primary);
+  background: var(--green-glow);
+  border-color: var(--green-dark);
+  text-shadow: var(--glow-text-green);
+}
+
+.nav-link.active {
+  color: var(--green-primary);
+  border-color: var(--green-dark);
+  background: var(--green-glow);
+}
+
+.nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--green-primary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.nav-mobile-toggle:hover {
+  border-color: var(--green-dark);
+  background: var(--green-glow);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 var(--space-md);
+  }
+
+  .nav-mobile-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: var(--space-sm);
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px;
+  }
+}

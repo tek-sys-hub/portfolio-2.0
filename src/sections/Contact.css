@@ -1,0 +1,132 @@
+.contact-section {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.contact-terminal {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-size: var(--fs-xs);
+  color: var(--cyan-primary);
+  font-family: var(--font-mono);
+}
+
+.contact-label::before {
+  content: '> ';
+  color: var(--green-primary);
+}
+
+.contact-input,
+.contact-textarea {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px 14px;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  transition: all var(--transition-fast);
+  outline: none;
+  width: 100%;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: var(--green-dark);
+  box-shadow: 0 0 0 2px var(--green-glow);
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.contact-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-submit {
+  background: transparent;
+  border: 1px solid var(--green-dark);
+  color: var(--green-primary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  align-self: flex-start;
+}
+
+.contact-submit:hover {
+  background: var(--green-glow);
+  box-shadow: var(--glow-green);
+  text-shadow: var(--glow-text-green);
+}
+
+.contact-or {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: var(--fs-xs);
+  margin: var(--space-xl) 0;
+  position: relative;
+}
+
+.contact-or::before,
+.contact-or::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.contact-or::before { left: 0; }
+.contact-or::after { right: 0; }
+
+.contact-direct-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.contact-direct-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all var(--transition-base);
+}
+
+.contact-direct-link:hover {
+  color: var(--green-primary);
+  border-color: var(--green-dark);
+  background: var(--green-glow);
+  text-shadow: none;
+}
+
+.contact-direct-link .link-prefix {
+  color: var(--green-primary);
+}

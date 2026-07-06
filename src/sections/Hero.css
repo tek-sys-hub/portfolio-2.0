@@ -1,0 +1,115 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: var(--nav-height);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  padding: var(--space-xl);
+}
+
+.hero-boot {
+  text-align: left;
+  margin-bottom: var(--space-2xl);
+  font-size: var(--fs-xs);
+  color: var(--text-dim);
+  line-height: 2;
+}
+
+.hero-boot .boot-line {
+  opacity: 0;
+  animation: boot-fade-in 0.3s ease forwards;
+}
+
+.hero-boot .boot-ok {
+  color: var(--green-primary);
+}
+
+.hero-boot .boot-service {
+  color: var(--text-secondary);
+}
+
+.hero-name {
+  font-size: var(--fs-5xl);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: var(--space-md);
+  font-family: var(--font-mono);
+}
+
+.hero-title {
+  font-size: var(--fs-xl);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-mono);
+}
+
+.hero-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--text-dim);
+  margin-bottom: var(--space-2xl);
+  font-family: var(--font-mono);
+}
+
+.hero-prompt {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  padding: 10px 20px;
+  background: var(--bg-terminal);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+}
+
+.hero-prompt:hover {
+  border-color: var(--green-dark);
+  box-shadow: var(--glow-green);
+  color: var(--green-primary);
+  text-shadow: none;
+}
+
+.hero-prompt .prompt-symbol {
+  color: var(--green-primary);
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-dim);
+  font-size: var(--fs-xs);
+  animation: scroll-bounce 2s ease infinite;
+  z-index: 1;
+}
+
+@keyframes boot-fade-in {
+  to { opacity: 1; }
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: var(--space-md);
+  }
+
+  .hero-boot {
+    font-size: 0.65rem;
+  }
+}

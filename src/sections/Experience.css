@@ -1,0 +1,22 @@
+.experience-section {
+  padding-top: var(--space-4xl);
+}
+
+.experience-timeline {
+  margin-top: var(--space-lg);
+}
+
+.experience-header {
+  font-size: var(--fs-xs);
+  color: var(--text-dim);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--space-md);
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.experience-header span:first-child {
+  color: var(--yellow-primary);
+  min-width: 70px;
+}

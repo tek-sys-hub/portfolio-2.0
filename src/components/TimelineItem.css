@@ -1,0 +1,110 @@
+.timeline-item {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+  position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: 55px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--green-dark), transparent);
+}
+
+.timeline-hash {
+  flex-shrink: 0;
+  width: 70px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--yellow-primary);
+  padding-top: 2px;
+  text-align: center;
+}
+
+.timeline-hash::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--green-primary);
+  border-radius: 50%;
+  margin-right: 6px;
+  box-shadow: 0 0 6px var(--green-glow);
+  vertical-align: middle;
+}
+
+.timeline-content {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+}
+
+.timeline-content:hover {
+  border-color: var(--border-glow);
+  box-shadow: var(--glow-green);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline-role {
+  font-size: var(--fs-lg);
+  color: var(--green-primary);
+  font-weight: 600;
+}
+
+.timeline-branch {
+  font-size: var(--fs-xs);
+  color: var(--purple-primary);
+  background: rgba(189, 147, 249, 0.1);
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid rgba(189, 147, 249, 0.2);
+}
+
+.timeline-company {
+  font-size: var(--fs-sm);
+  color: var(--cyan-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.timeline-date {
+  font-size: var(--fs-xs);
+  color: var(--text-dim);
+  margin-bottom: var(--space-sm);
+}
+
+.timeline-description {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .timeline-hash {
+    width: auto;
+    text-align: left;
+  }
+
+  .timeline-item:not(:last-child)::after {
+    display: none;
+  }
+}
