@@ -31,7 +31,7 @@ const ProjectCard = ({ project, index }) => {
             Repository
           </a>
         )}
-        {project.live && (
+        {project.live && typeof project.live === 'string' && (
           <a href={project.live} className="project-button live-button" target="_blank" rel="noopener noreferrer">
             Live Demo
           </a>

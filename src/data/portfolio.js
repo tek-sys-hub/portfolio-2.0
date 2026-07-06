@@ -69,43 +69,22 @@ export const projects = [
     github: "https://github.com/tek-sys-hub/minimal-waybar-linux",
     live: null,
     size: "145K",
-    date: "2024",
+    date: "2026",
+  },
+  {
+    name: "portfolio-terminal",
+    type: "dir",
+    description: "A terminal-based portfolio showcasing my projects and skills.",
+    tech: ["Portfolio", "CSS", "Linux"],
+    github: "https://github.com/tek-sys-hub/portfolio-2.0",
+    live: "https://tek-sys-hub.github.io/portfolio-2.0",
+    size: "25.53MB",
+    date: "2026",
   },
 ];
 
 export const experience = [
-  {
-    hash: "a7f3c2d",
-    date: "2024 — Present",
-    role: "Senior Backend Developer",
-    company: "TechCorp Inc.",
-    description: "Leading backend architecture for microservices platform. Reduced API latency by 40% and implemented CI/CD pipelines.",
-    branch: "main",
-  },
-  {
-    hash: "e91b4f8",
-    date: "2023 — 2024",
-    role: "Backend Developer",
-    company: "StartupXYZ",
-    description: "Built RESTful APIs serving 50k+ users. Designed database schemas and implemented caching strategies.",
-    branch: "develop",
-  },
-  {
-    hash: "c3d5a17",
-    date: "2022 — 2023",
-    role: "Junior Developer",
-    company: "DevAgency",
-    description: "Full-stack development with focus on Node.js backends. Contributed to 10+ client projects.",
-    branch: "feature/career",
-  },
-  {
-    hash: "f0a2b91",
-    date: "2021 — 2022",
-    role: "Freelance Developer",
-    company: "Self-employed",
-    description: "Built custom web solutions for small businesses. Managed hosting, deployment, and maintenance.",
-    branch: "origin/freelance",
-  },
+  
 ];
 
 export const socialLinks = [
