@@ -77,7 +77,7 @@ export const projects = [
     description: "A terminal-based portfolio showcasing my projects and skills.",
     tech: ["Portfolio", "CSS", "Linux"],
     github: "https://github.com/tek-sys-hub/portfolio-2.0",
-    live: "https://tek-sys-hub.github.io/portfolio-2.0",
+    live: "https://portfolio-b17.vercel.app",
     size: "25.53MB",
     date: "2026",
   },
