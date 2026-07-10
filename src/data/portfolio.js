@@ -81,6 +81,16 @@ export const projects = [
     size: "25.53MB",
     date: "2026",
   },
+  {
+    name: "eww-minimal-layout",
+    type: "dir",
+    description: "A minimal Eww layout for Linux.",
+    tech: ["Eww", "Bash", "Linux"],
+    github: "https://github.com/tek-sys-hub/eww-minimal-layout",
+    live: null,
+    size: "152K",
+    date: "2026",
+  },
 ];
 
 export const experience = [
